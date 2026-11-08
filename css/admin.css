@@ -1,0 +1,23 @@
+#admin{margin-top:2.5rem;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;display:none}
+#admin h2{margin:0 0 .3rem;font-size:1.05rem}
+#admin p{margin:0 0 1rem;color:var(--muted);font-size:.9rem}
+#admin .f{display:grid;gap:10px}
+#admin input[type=text]{flex:none;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:1rem;background:rgba(0,0,0,.35)}
+#admin input[type=file]{color:var(--muted)}
+#st{margin-top:10px;font-size:.9rem;color:var(--muted)}
+#gate{margin-top:2.5rem;display:none}
+#gform{display:none;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+#gform input{flex:0 1 260px;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:999px;color:var(--ink);font:500 1rem "Manrope",system-ui,Arial,sans-serif;padding:12px 18px;outline:0}
+#gform input:focus{border-color:var(--ember)}
+#gmsg{margin-top:10px;font-size:.9rem;color:var(--muted)}
+.ahead{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.ahead h2{margin:0}
+.stats{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
+.blk{border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem}
+.blk h3{margin:0 0 .3rem;font-size:1rem}
+.blk p{margin:0 0 .8rem;color:var(--muted);font-size:.9rem}
+.blk .f{display:grid;gap:10px}
+.blk textarea{width:100%;margin:10px 0;background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:10px;font:.8rem ui-monospace,Menlo,Consolas,monospace;resize:vertical}
+.note,.meter{font-size:.88rem;color:var(--muted);margin-top:8px;min-height:1.2em}
+.meter{margin:-4px 0 0}
+code{background:rgba(0,0,0,.4);padding:1px 6px;border-radius:6px}
