@@ -4,7 +4,7 @@ const VAULT={};
 const HINTS={};
 HINTS["63f5950a690fb6501ef7fd6a6e7a352f0cd773c81307d61a18458d6ae3c43a8d"]="номер записи";
 (VAULT["63f5950a690fb6501ef7fd6a6e7a352f0cd773c81307d61a18458d6ae3c43a8d"]=VAULT["63f5950a690fb6501ef7fd6a6e7a352f0cd773c81307d61a18458d6ae3c43a8d"]||[]).push("f3d53a1a0cd85cb20ce21d4a84a8f8cf");
-HINTS["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]="то что когда-то было забыто";
-(VAULT["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]=VAULT["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]||[]).push("9293e78d27d851f5a6f6f38d444abc63");
+HINTS["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]="То что когда-то было забыто";
+(VAULT["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]=VAULT["a17be9d2b208d3aac6330723ea3a0fffe4134b5eff6a45a4347f35e4c88076be"]||[]).push("6a2054855a944c2fa87a37a544fc11b5");
 
 
