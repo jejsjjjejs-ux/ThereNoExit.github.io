@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Личный поиск</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<main>
+<form class="s" id="f" autocomplete="off">
+<input id="q" type="search" placeholder="Введите запрос" aria-label="Запрос">
+<button class="go" id="go" type="submit">Найти</button>
+</form>
+<div id="out" aria-live="polite"></div>
+<div id="gate">
+<button type="button" class="ghost" id="gopen">Вход для администратора</button>
+<form id="gform" autocomplete="off">
+<input type="password" id="gpw" placeholder="Пароль" aria-label="Пароль администратора" autocomplete="off">
+<button class="go" id="gbtn" type="submit">Войти</button>
+</form>
+<div id="gmsg" aria-live="polite"></div>
+</div>
+<section id="admin">
+<div class="ahead"><h2>Админ-панель</h2><button class="ghost" id="logout" type="button">Выйти</button></div>
+<div id="stats" class="stats"></div>
+<div class="blk">
+<h3>Добавить файлы</h3>
+<p>Файлы шифруются в браузере и никуда не отправляются. Результат нужно добавить в конец js/data.js и загрузить файлы на хостинг.</p>
+<div class="f">
+<input type="text" id="ph" placeholder="Фраза-запрос">
+<div id="meter" class="meter"></div>
+<input type="text" id="pw2" placeholder="Пароль на файлы (необязательно)">
+<input type="text" id="hint" placeholder="Подсказка к паролю (необязательно)">
+<input type="file" id="fl" multiple>
+<label class="chk"><input type="checkbox" id="inl"> Встроить в страницу (для claude.ai, до 10 МБ). Без галочки файлы кладутся в папку vault/, до 95 МБ.</label>
+<div class="row"><button class="go" id="add" type="button">Зашифровать</button><button class="ghost" id="gen" type="button">Сгенерировать фразу</button></div>
+</div>
+<textarea id="res" readonly rows="4" placeholder="Здесь появится результат"></textarea>
+<div class="row"><button class="ghost" id="copy" type="button">Копировать</button><button class="ghost" id="dlb" type="button">Скачать файлы .bin</button><button class="ghost" id="dl" type="button">Скачать entry.txt</button></div>
+<div id="st" class="note"></div>
+</div>
+<div class="blk">
+<h3>Проверить запись</h3>
+<p>Есть ли фраза в хранилище и открывается ли она с этим паролем.</p>
+<div class="f"><input type="text" id="cph" placeholder="Фраза"><input type="text" id="cpw" placeholder="Пароль (если нужен)"><button class="ghost" id="chk" type="button">Проверить</button></div>
+<div id="cst" class="note"></div>
+</div>
+<div class="blk">
+<h3>Сменить пароль администратора</h3>
+<p>Новый пароль нигде не сохраняется. Вы получите строку, которой нужно заменить <code>const AUTH=…</code> в js/auth.js.</p>
+<div class="f"><input type="text" id="np" placeholder="Новый пароль (от 12 символов)"><button class="ghost" id="mk" type="button">Получить строку</button></div>
+<textarea id="nres" readonly rows="3"></textarea>
+<div id="nst" class="note"></div>
+</div>
+</section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/data.js"></script>
+<script src="js/search.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
