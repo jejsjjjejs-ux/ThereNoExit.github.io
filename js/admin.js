@@ -67,7 +67,7 @@ const h=await sha("lookup:"+phrase),l=VAULT[h];
 if(!l){st.textContent="Такой фразы в хранилище нет.";return}
 let t="Фраза есть: файлов "+l.length+((h in HINTS)?", нужен пароль (подсказка: "+HINTS[h]+")":", без пароля")+".";
 if(pw||!(h in HINTS)){
-const els=await decryptAll(phrase,pw?phrase+"\u0000"+pw:phrase,l);
+SHOWNAMES=true;const els=await decryptAll(phrase,pw?phrase+"\u0000"+pw:phrase,l);SHOWNAMES=false;
 t+=els.length?" Расшифровка успешна: "+els.map(e=>e.querySelector("h3").textContent).join(", ")+".":" Расшифровать не удалось: неверный пароль.";
 }
 st.textContent=t;
