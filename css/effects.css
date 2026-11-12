@@ -55,3 +55,6 @@ input:focus::placeholder{opacity:.35}
 @media (prefers-reduced-motion:reduce){
 *,*::before,*::after{animation:none!important;transition:none!important}
 }
+a.mark{display:block;cursor:pointer;text-decoration:none;transition:transform .25s,filter .25s}
+a.mark:hover{filter:brightness(1.25) drop-shadow(0 0 14px rgba(255,74,28,.8));transform:scale(1.12)}
+a.mark:focus-visible{outline:2px solid var(--ember);outline-offset:8px;border-radius:10px}

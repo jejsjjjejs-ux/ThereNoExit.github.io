@@ -24,3 +24,6 @@ form.pw{margin-bottom:12px}
 .file pre .st{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--ember);opacity:.7}
 .file pre .bar{background:#000;color:#000;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.14);-webkit-user-select:none;user-select:none}
 .file pre .st.bar{opacity:1}
+.file.fit{width:fit-content;max-width:100%;justify-self:center;padding:10px}
+.file.fit::before{display:none}
+.file.fit img,.file.fit video{display:block;margin:0;width:auto;max-width:100%;border-radius:10px}
