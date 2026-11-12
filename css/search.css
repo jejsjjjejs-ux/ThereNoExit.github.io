@@ -27,3 +27,16 @@ form.pw{margin-bottom:12px}
 .file.fit{width:fit-content;max-width:100%;justify-self:center;padding:10px}
 .file.fit::before{display:none}
 .file.fit img,.file.fit video{display:block;margin:0;width:auto;max-width:100%;border-radius:10px}
+.gallery{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.file.thumb{padding:8px;margin:0;justify-self:auto}
+.file.thumb img{height:170px;width:auto;max-width:320px;max-height:none;object-fit:cover;border-radius:8px;cursor:zoom-in;transition:filter .2s}
+.file.thumb img:hover{filter:brightness(1.12)}
+.file.thumb img:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+#lb{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(5,3,3,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:fade .25s ease both}
+#lb[hidden]{display:none}
+#lb img{max-width:92vw;max-height:88vh;border:1px solid rgba(255,120,80,.4);border-radius:12px;box-shadow:0 0 70px -10px rgba(255,74,28,.55);cursor:zoom-out}
+#lb button{position:absolute;background:rgba(18,12,11,.75);color:var(--ink);border:1px solid var(--line);border-radius:999px;width:46px;height:46px;font:400 1.7rem/1 "Manrope",system-ui,Arial,sans-serif;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+#lb button:hover{border-color:var(--ember);box-shadow:0 0 18px -4px rgba(255,74,28,.7)}
+#lb .lb-x{top:max(16px,env(safe-area-inset-top,0px));right:16px}
+#lb .lb-p{left:16px;top:50%;margin-top:-23px}
+#lb .lb-n{right:16px;top:50%;margin-top:-23px}
