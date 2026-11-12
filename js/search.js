@@ -27,7 +27,11 @@ const LOADERR="Не удалось загрузить файл. Откройте
 function showEls(els){
 out.innerHTML="";
 if(els.length>1){const d=document.createElement("div");d.className="msg";d.textContent="Найдено файлов: "+els.length;out.appendChild(d)}
-els.forEach(e=>out.appendChild(e))
+let g=null;
+els.forEach(e=>{
+if(e.classList.contains("thumb")){if(!g){g=document.createElement("div");g.className="gallery";out.appendChild(g)}g.appendChild(e)}
+else{g=null;out.appendChild(e)}
+})
 }
 function askPassword(phrase,list,hint){
 out.innerHTML="";
@@ -77,7 +81,7 @@ if(!ty){ty={pdf:"application/pdf",png:"image/png",jpg:"image/jpeg",jpeg:"image/j
 const blob=new Blob([body],{type:ty||"application/octet-stream"});
 const url=URL.createObjectURL(blob);
 let shown=true;
-if(ty.startsWith("image/")){const e=document.createElement("img");e.alt="";e.src=url;c.appendChild(e);c.classList.add("fit")}
+if(ty.startsWith("image/")){const e=document.createElement("img");e.alt="";e.src=url;e.tabIndex=0;e.onclick=()=>openLightbox(e);e.onkeydown=ev=>{if(ev.key==="Enter")openLightbox(e)};c.appendChild(e);c.classList.add("fit","thumb")}
 else if(ty.startsWith("video/")){const e=document.createElement("video");e.controls=true;e.src=url;c.appendChild(e);c.classList.add("fit")}
 else if(ty.startsWith("audio/")){const e=document.createElement("audio");e.controls=true;e.src=url;e.style.width="100%";c.appendChild(e)}
 else if(ty==="application/pdf"){const e=document.createElement("iframe");e.src=url;e.title="Документ";c.appendChild(e)}
