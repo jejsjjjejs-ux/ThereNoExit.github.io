@@ -25,7 +25,7 @@ function normalizeShowcase(data){
   return Array.from({length:CARD_COUNT},(_,i)=>{
     const c=Array.isArray(data)?data[i]||{}:{};
     const fallbackText=i<ARCHIVE_COUNT?"":"Здесь будет ваш текст.";
-    const card={title:String(c.title||defaultTitle(i)).slice(0,100),text:String(c.text??fallbackText).slice(0,3000),image:typeof c.image==="string"?c.image:""};
+    const card={title:String(c.title||defaultTitle(i)).slice(0,100),text: String(c.text || fallbackText || "").trim().slice(0, 3000),image:typeof c.image==="string"?c.image:""};
     if(i>=ARCHIVE_COUNT){
       const preset=CHARACTER_PRESETS[CHARACTER_NAMES[i-ARCHIVE_COUNT]];
       const untouched=!Array.isArray(c.qa)||c.qa.every((x,k)=>x&&x.q===`Вопрос ${k+1}`&&(x.a===undefined||x.a==="Здесь будет ответ."));
